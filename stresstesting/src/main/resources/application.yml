@@ -1,0 +1,12 @@
+
+mybatis:
+  type-aliases-package: com.stress.test.domain
+  mapper-locations: classpath*:mapper/**/*.xml
+
+spring:
+  profiles:
+    active: dev
+
+
+
+

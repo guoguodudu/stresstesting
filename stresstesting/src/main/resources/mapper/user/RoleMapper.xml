@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stress.test.mapper.user.RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.stress.test.domain.user.Role" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="is_delete" property="isDelete" jdbcType="BIT" />
+  </resultMap>
+
+  <select id="findByUserRole" resultMap="BaseResultMap" useCache="false" parameterType="Long">
+    select
+    r.*
+    from sys_user_role ur,sys_role r
+    WHERE r.id=ur.role_id
+    AND r.state=1
+    AND r.is_delete=0
+    AND ur.user_id=#{id, jdbcType=BIGINT}
+  </select>
+
+
+</mapper>

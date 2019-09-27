@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.stress.test.mapper.user.PermissionMapper" >
+  <resultMap id="BaseResultMap" type="com.stress.test.domain.user.Permission" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="discription" property="discription" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="is_delete" property="isDelete" jdbcType="BIT" />
+  </resultMap>
+  <select id="findByUserPermission" resultMap="BaseResultMap" parameterType="Long">
+    SELECT
+    p.*
+  FROM
+      sys_permission p,
+      sys_user u,
+      sys_role r,
+      sys_user_role ur,
+      sys_role_permission rp
+  WHERE
+      ur.role_id = r.id AND ur.user_id = u.id
+          AND rp.role_id = r.id
+          AND rp.permission_id = p.id
+          AND r.is_delete=0
+          AND u.is_delete=0
+          AND p.is_delete=0
+          AND p.code !=''
+          AND u.id = #{userId, jdbcType=BIGINT};
+  </select>
+</mapper>

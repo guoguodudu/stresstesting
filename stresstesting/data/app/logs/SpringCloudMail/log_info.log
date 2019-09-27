@@ -1,0 +1,11 @@
+===2019-09-06 15:28:56.366 INFO  com.stress.test.MailApplication Line:650 - The following profiles are active: dev
+===2019-09-06 15:29:00.839 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8080"]
+===2019-09-06 15:29:00.865 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+===2019-09-06 15:29:00.866 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.21]
+===2019-09-06 15:29:01.087 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+===2019-09-06 15:29:05.575 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8080"]
+===2019-09-06 15:29:05.630 INFO  com.stress.test.MailApplication Line:59  - Started MailApplication in 13.499 seconds (JVM running for 23.476)
+===2019-09-06 15:29:57.542 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+===2019-09-06 15:29:57.614 INFO  com.stress.test.service.Impl.user.IUserServiceImpl Line:27  - method=insertUser,user=【User(id=null, name=123, icon=null, email=null, login=123, password=null, salt=null, state=null, isDelete=null)】
+===2019-09-06 15:29:57.679 INFO  com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+===2019-09-06 15:29:58.278 INFO  com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
