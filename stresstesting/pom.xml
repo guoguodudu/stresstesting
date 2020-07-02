@@ -20,7 +20,7 @@
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
         <targetMapperPackage>com.stress.test.mapper</targetMapperPackage>
         <targetModelPackage>com.stress.test.domain</targetModelPackage>
-        <mysql.version>8.0.15</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <!--  XML  -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>
